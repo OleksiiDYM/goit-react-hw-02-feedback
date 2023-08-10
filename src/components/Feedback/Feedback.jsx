@@ -36,7 +36,9 @@ export const Feedback = ({
 };
 
 Feedback.propTypes = {
-  state: PropTypes.object.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
   countTotalFeedback: PropTypes.func.isRequired,
   countPositiveFeedbackPercentage: PropTypes.func.isRequired,
