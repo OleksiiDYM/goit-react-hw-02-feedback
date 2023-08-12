@@ -17,7 +17,11 @@ export const Statistics = ({ state, total, positivePercentage }) => (
 );
 
 Statistics.propTypes = {
-  state: PropTypes.object.isRequired,
+  state: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
   total: PropTypes.func.isRequired,
   positivePercentage: PropTypes.func.isRequired,
 };

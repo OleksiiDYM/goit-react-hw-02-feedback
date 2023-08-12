@@ -13,5 +13,9 @@ export const FeedbackOptions = ({ state, onLeaveFeedback }) => (
 
 FeedbackOptions.propTypes = {
   onLeaveFeedback: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
+  state: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
 };
